@@ -1,0 +1,117 @@
+.My_Style {
+    font-weight: none;
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* This is how you write a comment! */
+.My_Style p {
+	font-weight: bold;
+	font-style: italic;
+    font-size: 35px;
+    margin: 0px 0;
+}
+
+.My_Style h1 {
+	font-style: italic;
+	font-weight: none;
+    font-size: 60px;
+    text-decoration: underline;
+	text-decoration-color: none;
+    margin: 0px 0;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+    color: black;
+    text-shadow: 
+        1px 1px 3px snow, 
+        -1px -1px 3px snow, 
+        1px -1px 3px snow, 
+        -1px 1px 3px snow;
+}
+
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.My_Style img {
+    border: 5px solid black;
+    border-radius: 5px;
+    max-width: 35%;
+    height: auto;
+    margin: 0px 0;
+}
+
+footer {
+	font-size: 23px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 100px;
+	margin-top: 150px;
+}
+
+footer nav a {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 
+        1px 1px 3px #FFD68A, 
+        -1px -1px 3px #FFD68A, 
+        1px -1px 3px #FFD68A, 
+        -1px 1px 3px #FFD68A;
+}
+
+footer nav a:hover {
+    color: snow;
+}
+
+table td a {
+    color: black;
+    font-weight: bold;
+    font-size: 19px;
+    text-shadow: 
+        1px 1px 3px #FFD68A, 
+        -1px -1px 3px #FFD68A, 
+        1px -1px 3px #FFD68A, 
+        -1px 1px 3px #FFD68A;
+}
+
+table td a:hover {
+    color: snow;
+}
+
+table {
+    margin: 0 auto;
+    margin-bottom: 40px; /* Adjust bottom margin as needed */
+    margin-top: 40px;    /* Adjust top margin as needed */
+    border-collapse: separate; /* Allow spacing between rows */
+    border-spacing: 0 15px; /* Space between rows */
+}
+
+th, td {
+    padding: 0px; /* Add padding to table cells */
+}
+
+/* tr 
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: light background for rows 
+} */

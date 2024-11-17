@@ -1,0 +1,6 @@
+input {
+    width: 300px; /*Set the width to 300 pixels*/
+    margin: 10px 0; /*Add 10px margin above and below each input*/
+    border: 2px solid#333; /*Add a 2px solid black border around each input*/
+    border-radius: 5px; /*Slightly rounded corners*/
+}

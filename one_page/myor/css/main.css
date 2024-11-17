@@ -1,0 +1,12 @@
+/*Google font imports*/
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+
+body {
+    background-image: url('../../images/general_body_background.jpg'); /* Set the background image */
+    background-size: cover; /* Make the background cover the whole page */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Makes the background stay in place while scrolling */
+}

@@ -1,0 +1,29 @@
+header {
+    background-color: #000000; /* Background color */
+    border: 5px solid #ffffff; /* Add a border around the background */
+    border-radius: 20px; /* Rounded corners */
+    width: 45%; /* Set width to 50% of the parent container */
+    margin: 0 auto; /* Center the header box */
+    padding: 20px 10px; /* Space around the text */
+    text-align: center; /* Center the text inside */
+    color: #ee2b1e; /* Set the text color */
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px; /* Set the text size */
+    -webkit-text-stroke: 2px rgb(255, 255, 255); /* Text border */
+}
+
+
+header h1 {
+    margin-top: 10px; /* Reduce space between the text and image */
+    margin-bottom: 0px; /* Reduce space between the text and image */
+}
+
+
+header img {
+    border-radius: 50%; /* Make the image a circle */
+    margin: 10px auto; /* Center the image and add space above and below */
+    height: 600px; /* Set the height of the image */
+    width: 600px; /* Set the width of the image */
+}

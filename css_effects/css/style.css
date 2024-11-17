@@ -1,0 +1,223 @@
+
+
+/*NAVBAR*/
+.nav-bar{
+    position: sticky;
+    top: 0; /*Sets the position of the navbar in the stack later so it is on top*/
+    z-index: 9;  /*Set to 9, since we are using 9 photos. We want to make sure 
+    the navbar remains visble over all other elements of the webpage.*/
+}
+
+/*Unordered list - <ul>*/
+ul{ 
+    list-style-type: none; /*Removes the default bullet points on the list tag elements*/
+    background-color: #363636; /*Sets the background color of the navbar*/
+    margin: -10px -10px 0px -10px; /*Margin value order top, right, bottom, and left*/
+    overflow: hidden; /*Hides excess margin space expanding past the browser window edge 
+    and prevents a left to right scroll bar*/
+    display: flex; /*Displays the items in a row, rather than a column,  
+    and makes the elements take up as much of the width that is available*/
+    align-items: center; /*Centers text inside each element*/
+}
+
+/*List items - <li>*/
+a{
+    display: block; /*Sets each item to a new line, so they are stacked, rather than side by side*/ 
+    font-family: Calibri, sans-serif;
+    font-size: 23px; 
+    font-weight: 600; /*Larger number makes for bolder font*/
+    color: white;
+    text-decoration: none; /*Removes the default underline that is attached to links*/
+    text-transform: uppercase; /*Makes all text uppercase even regardless of the case used to it*/
+    width: 100px; /*Sets the width size of each list item (left to right size <---->)*/
+    padding: 30px; /*Puts space between each list item*/
+    text-align: center; /*Centers the text in the list item*/
+    transition: background-color 0.4s ease-in; /*Smoothens the transition of the background color change*/
+}
+
+/*NAVBAR ROLLOVER-EFFECT*/
+a:hover, .drop:hover{ /*drop:hover triggers when any one of the links in the Images list tag is being hovered over*/
+    background-color: rgb(228, 159, 0); /*Changes the background color of the list item when hovered over*/
+    color: rgb(49, 49, 49); /*Changes the text color of the list item when hovered over*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7); /*Adds a shadow effect to the list item when hovered over*/
+    transition: background-color 0.3s ease-in; /*Smoothens the transition of the background color change*/ 
+}
+
+/*ROLLOVER-MENU - Styles and hides the anchor links within the Images link div tag*/
+.rollover-menu{ 
+    display: none; /*Hides the rollover menu*/
+    position: absolute; /*The absolute position will remove an element to avoid affecting the other documents around it*/
+    background-color: white; 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*ROLLOVER-MENU DROP MENU EFFECT*/
+.drop:hover .rollover-menu{ 
+    display: block; /*Displays a drop menu when hovering over the rollover menu Images link*/
+}
+
+/*ROLLOVER-MENU - Targeting anchor elements within the div tag that contains the rollover-menu selector*/
+.rollover-menu a{
+    color: #363636; /*Sets the text color of the anchor links text within the rollover menu*/
+}
+
+/*ROLLOVER-MENU - styles <a> anchor elements within the div tag that contains the rollover-menu class 
+selector when the hover effect is triggered*/
+.rollover-menu a:hover{
+    color: white;
+}
+
+/*I used (odd) & (even) for the code below, because I did my own theme and had 8 photos, rather than 3.
+Same results and it made me feel special lol*/
+                    
+/*ROLLOVER-MENU 'nth-child' - Styles the first(1) anchor link within the rollover menu when hovered over*/
+.rollover-menu a:hover:nth-child(odd){  
+    background-color: rgb(117, 20, 20);
+} 
+
+/*ROLLOVER-MENU 'nth-child' - Styles the second(2) anchor link within the rollover menu when hovered over*/
+.rollover-menu a:hover:nth-child(even){  
+    background-color: rgb(87, 7, 7);
+} 
+
+/*FOOTER*/
+footer{
+    background-color: #363636;
+    margin: 30px -10px -10px -10px; /*Margin value order top, right, bottom, and left*/
+    overflow: hidden; /*Hides excess margin space expanding past the browser window edge and 
+    prevents a left to right scroll bar*/
+    height: 70px; /*Sets the height of the footer from the bottom of the page*/
+}
+
+/*Styles the text in the footer*/
+.footer-text{
+    font-family: Calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(228, 159, 0);
+    text-align: center;
+}
+
+/*
+How the instructor did their images. I did mine different, because I might further develop this project,
+but I wanted their information to reference back to.
+
+*IMAGES*
+img{
+    width: 700px;
+    height: 550px;
+}
+
+*Creates a container for each image to be held in*   //They put class=image-container in each image div tag. Not sure                                                                                                      
+.image-container{                                    //if it matters yet, but I made mine part of a nested div tag.  IT MATTERED lol
+    display: flex;
+    justify-content: center;  *Equally adjust space on either side of the image to center it within container*
+    padding-top: 120px; *Adds space above the image*
+}
+*/
+    
+/*GEAR IMAGES - Targets images that are inside a class .gear-image-container div tag*/
+.gear-image-container img { 
+    width: 800px;
+    height: 450px; /*Used 450 here, because I have a smaller photo with this for it's max*/
+}
+
+/*IMAGE CONTAINER - Creates the container for the an image*/
+.gear-image-container{
+    display: flex; 
+    justify-content: center; /*Equally adjust space on either side of the image to center it within container*/
+    padding-top: 120px; 
+    gap: 10px; /*Sets the space between the images*/
+}
+
+/*Creates equal spacing between navbar and the top of each picture when clicking a bookmark link*/
+#Gear5{
+    padding-bottom: 260px;
+}
+
+/*IMAGE ONE (Gear 1) OVERLAY EFFECT- Overlays a dark grey color over the image*/
+.overlay{
+    position: absolute;
+    width: 800px;
+    height: 450px;
+    background-color: rgb(90, 90, 90);
+    opacity: 0;
+    transition: 0.5s ease; 
+}
+
+/*Triggers overlay when hovering over image one (gear 1)*/
+.overlay:hover{
+    opacity: 0.6; /*Sets the opacity of the overlay to 60% when hovered over*/
+}
+
+/*IMAGE TWO (Gear2) ZOOM EFFECT - Zooms in or out on the image*/
+.zoom{
+    transform: scale(1); /*Negative = smaller / positive = larger. (1) = Same change on both axis. (1, 2) = (X, Y)*/
+    transition: 0.5s ease; /*Creates a smooth transition of the image zooming back to its original state*/
+    z-index: 8; /*Ensures it'll overlap everything except the navbar which is set to 9(code is at top of page)*/
+}
+
+/*Triggers the zoom effect of the image two (gear 2)*/
+.zoom:hover{
+    transform: scale(1.5); /*Scales image to grow half it's side*/
+    transition: 0.5s ease-out;
+}
+
+/*IMAGE THREE (Gear 3) ANIMATED OVERLAY EFFECT - Overlay starts at center of image and grows outward till image is covered*/ 
+/*Creates the position of the animation burst and hides any overflow of the 
+shape size going beyond the edges of image 3*/
+.circle{
+    position: relative;
+    margin:0px;
+    overflow: hidden;
+}
+
+/*Sets up the burst animation shape and position before the hover effect is triggered*/
+.circle::before{ 
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%; /*Creates a circle/oval shape*/
+    opacity: 0; /*Makes the shape invisible until the animation is triggered by hover effect*/
+    top: 50%;
+    left: 50%; /*Top and left position the circle to the center of image three(Gear 3)*/
+    transform: translate(-50%, -50%); /*Allows the circle to evenly expand on all four sides of the image*/
+    animation: burst-reverse 1s; /*Triggers the burst-reverse animation effect for 1 seconds*/
+}
+
+/*Triggers the hover effect on the circle class slector*/
+.circle:hover::before{
+    animation: burst 1s; /*Triggers the burst animation effect for 1 second*/
+    animation-fill-mode: forwards; /*The animation will remain at the last keyframe after it has finished*/
+}
+
+/*Creates the growing circle effect*/
+/*You can tell the browser how the animation should process at different stages by using percentages
+0% is the very beginning of the animation and 100% would be the end of the animation*/
+@keyframes burst{
+        0% /*This is the start of the animation*/{
+        opacity: 0.2;
+        background-color:rgb(224, 224, 224);
+    }
+    100% /*This is the end of the animation*/{
+        opacity: 0.7;
+        background-color:rgb(224, 224, 224);
+        width: 300%;
+        height: 300%; /*It will gradually increase in size by 300%*/
+    }
+}
+
+/*Does the opposite of burst. Shrinks circle back to the center of the image*/
+@keyframes burst-reverse{
+    0%{
+        opacity: 0.7;
+        background-color:rgb(224, 224, 224);
+        width: 300%;
+        height: 300%;
+    }
+    100%{
+        opacity: 0.2;
+        background-color:rgb(224, 224, 224);
+    }
+}
