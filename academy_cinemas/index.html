@@ -11,6 +11,8 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!--CUSTOM CSS / Had to be listed after bootstrap to override Bootstrap CSS based on levels of specificity-->
   <link href="css/custom.css" rel="stylesheet">
+  <!--Custom css for for multiple screen sizes!-->
+  <link href="css/custom_css_media.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,6 +49,22 @@
       </div>
     </div>
   </nav>
+  <!--Header-->
+  <!--LOGO-->
+  <header class="row justify-content-center">
+    <img src="images/second-logo.webp" class="img-fluid col-lg-6" id="header-image" alt="Academy Cinemas Logo">
+  </header>
+  <!--Now playing-->
+  <section>
+    <div class="container">
+      <h1>Now Playing</h1>
+      <!--Dredd-->
+      <div class="d-flex flex-row" id="dredd"></div>
+        <div class="col-lg-5">
+          <img src="images/dredd.jpg" class="img-fluid" alt="Dredd movie poster">
+        </div>
+    </div>
+  </section>
 </body>
 
 </html>
