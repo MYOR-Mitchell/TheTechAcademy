@@ -1,6 +1,8 @@
 /*Fonts from google*/
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
 
 /*Creates global CSS variables that can be reused throught the file*/
 :root{
@@ -11,6 +13,11 @@
     --accent-color: rgb(36, 36, 36);
     --accent-text-color: rgb(255, 255, 255);
     --main-font-family: 'Passion One', cursive;
+    --secondary-font-family: 'Yesteryear', cursive;
+}
+
+html{
+    scroll-padding-top: 100px;
 }
 
 body{
@@ -104,13 +111,15 @@ body{
 /*Header image*/
 
 #header-image{
-    padding-top: 150px;
-    border-radius: 35%;
+    /* padding-top: 150px;  This is how instructor did it, but they forgot image file and new images looks bad */
+    border-radius: 10%;
+    height: 500px; /*Not instructors instruction*/
+    width: 35%;    /*Not instructors instruction*/
 }
 
 /*General Styling*/
 
-h1, h3, p{
+h1, h3, h4, h5, p{
     cursor: default; /*Changes the cursor back to the default arrow instead of a text cursor when hovering your mouse over text*/
 }
 
@@ -127,12 +136,167 @@ h3{
     font-size: 50px;
 }
 
+h4{
+    font-family: var(--secondary-font-family);
+    font-size: 25px;
+}
+
+h5{
+    font-size: 30px;
+    font-family: var(--main-font-family);
+}
+
 b{
     font-weight: 600;
+}
+
+img{
+    border-radius: 5px;
 }
 
 /*movie cards*/
 
 .container{
     padding: 100px;
+}
+
+.card{
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-body{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.spacer{
+    padding-top: 50px;
+
+}
+
+/*BUTTONS*/
+
+/*Creates the main styling for buttons that contain the Bootstrap .btn class*/
+.btn{
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+.btn:focus{
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.btn:hover{
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+
+/*Adding styling for yellow buttons for the buy tickets and contact form sections*/
+.yellow-btn{
+    background-color: var(--main-color-accent);
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 35px;
+    color: var(--accent-color);
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.yellow-btn:hover, .yellow-btn:focus{
+    background-color: var(--main-color-accent);
+    color: var(--accent-text-color);
+}
+
+/*Ticket cards*/
+
+/*Specifically styles the card class within the element containing the tickets id*/
+#tickets .card{
+    padding: 40px;
+    height: 250px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.form-select{
+    font-family: var(--main-font-family);
+    font-size: 20px;
+    border: 3px solid var(--main-color);
+    transition: border-color 0.5s ease-in;
+}
+
+.form-select:focus{
+    border-color: var(--secondary-color);
+    box-shadow: none; /*Overrides bootstraps box shadow*/
+    transition: 0.5s ease-in;
+}
+
+/*select number of tickets input*/
+
+input[type="number"]{
+    width: 70px;
+    padding: 5px;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    font-family: var(--main-font-family);
+    font-size: 20px;
+    transition: border-color 0.5s ease-in;
+}
+
+input[type="number"]:focus{
+    border: 3px solid var(--secondary-color);
+    transition: 0.5s ease-in;
+    outline: 0; /*Removes default outline set by browsers*/
+}
+
+/*Contact form*/
+
+.form-control{
+    border: 3px solid var(--main-color);
+    transition: 1s ease;
+}
+
+/*Overrides Bootstrap's focus effect*/
+.form-control:focus{
+    color: #212529;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0px .25rem var(--main-color);
+}
+
+/*Adjust the contact form submit button to the right side of the screen*/
+#contact-submit{
+    float: right;
+}
+
+/*FOOTER*/
+
+footer{
+    border-top: 5px solid var(--main-color);
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0px -15px 0px -15px;/*Extends the footer beyond the webpage on the left and right sides leaving no white space*/
+}
+
+.footer-text{
+    font-family: var(--main-font-family);
+    color: var(--accent-text-color);
+    font-size: 30px;
+}
+
+/*Specifically styles the footer image serparate from the other images on the page and override the img type selector styling*/
+.footer-img{
+    width: auto;
+    height: 130px;
+    border-radius: 50px;
 }
