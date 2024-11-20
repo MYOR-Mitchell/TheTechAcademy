@@ -21,7 +21,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Academy Cinemas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -59,10 +59,28 @@
     <div class="container">
       <h1>Now Playing</h1>
       <!--Dredd-->
-      <div class="d-flex flex-row" id="dredd"></div>
-        <div class="col-lg-5">
+      <div class="d-flex flex-row flex-wrap" id="dredd">
+        <div class="col-lg-5 mx-auto">
           <img src="images/dredd.jpg" class="img-fluid" alt="Dredd movie poster">
         </div>
+        <div class="card col-lg-5 mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Dredd</h3>
+            <!--Dredd movie Description-->
+            <p class="lead">
+              In a dystopian future, the sprawling, crime-ridden Mega-City One is policed by the Judges, who act as judge, jury, 
+              and executioner. Judge Dredd, a legendary and uncompromising enforcer, teams up with rookie Judge Cassandra Anderson 
+              on a mission to take down Ma-Ma, a ruthless drug lord controlling a 200-story tower block. As the Judges ascend 
+              the tower, they face relentless, brutal opposition in a battle for survival. Filled with intense action, 
+              gritty visuals, and a dark sense of justice, Dredd delivers a thrilling, no-holds-barred experience.
+              <br>
+              <br>
+              <b>Director:</b> Pete Travis
+              <br>
+              <b>Starring:</b> Karl Urban, Olivia Thirlby, Lena Headey
+            </p>
+        </div>
+      </div>
     </div>
   </section>
 </body>
