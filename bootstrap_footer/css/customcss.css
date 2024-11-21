@@ -1,0 +1,32 @@
+
+
+html{
+    scroll-padding-top: 100px;
+}
+
+body{
+    background-color: black;
+    background-size: 100% 120%; /*100% horizontally - 120% vertically, 120 makes image strech so bottom part of picture wont be seen.*/
+    background-attachment: fixed;
+    overflow-x: hidden; /*Removes left to right scrollbar*/
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text{
+    font-family: 'Nunito', sans-serif;
+    color: yellowgreen;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+
+.container-fluid {
+    background-color: purple;
+    height: 150px;
+}
