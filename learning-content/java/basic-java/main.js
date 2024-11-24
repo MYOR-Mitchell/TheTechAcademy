@@ -27,6 +27,13 @@ function multiplyButton(x, y) { //button click calls this function
                                                                         //Just calling the function on click opens a new page with the result.
 }
 
+function karaCheck(){
+    var sentence = "Are you Kara? <br>";
+    sentence += "...I don't trust you.";
+    
+    document.getElementById("result-kara").innerHTML = sentence;
+}
+
 const crew = {                      
     name: "Straw Hats",
     captain: "Monkey D. Luffy",
@@ -40,7 +47,3 @@ const crew = {
     musician: "Brook",
     helmsman: "Jinbe"   /* document.write(Crew.Helmsman); // Outputs: Jeremiah */
 };
-
-
-
-
