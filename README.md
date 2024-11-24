@@ -1,2 +1,2 @@
 # tech-assignments
- different projects or assignments from Tech Academy course.
+ different projects or task from Tech Academy course.
