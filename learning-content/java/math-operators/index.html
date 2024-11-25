@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A brief description of your webpage for SEO purposes.">
-
     <title>Learning</title>
+
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
     <!-- JavaScript -->
@@ -14,27 +14,46 @@
 </head>
 
 <body>
-    <script>
-        defeatKaraWrite();
-    </script>
-    <br><br>
-    <script>
-        defeatKaraAdd();
-    </script>
-    <br><br>
-    <script>
-        addStuff(2, 4);
-    </script>
-    <br><br>
-    <button onclick="multiplyButton(2, 4)" id="button-text-multiply">
-        2 x 4
-    </button>
-    <div id="result"></div>
-    <br><br>
-    <button onclick="karaCheck()" id="button-text-kara">
-        KARA!?
-    </button>
-    <div id="result-kara"></div>
+    <div>
+        <!-- Header -->
+        <div class="random-header">Calculator</div>
+
+        <!-- Display the Current Sum -->
+        <div id="sum">0</div>
+
+        <!-- Labels and Display for Num1 and Num2 -->
+        <div class="num-container">
+            <div id="num1-display" class="number-display" onclick="setActiveField('num1')">1</div>
+            <div id="operation" class="operation-display" onclick="setActiveField('operation')">+</div>
+            <div id="num2-display" class="number-display" onclick="setActiveField('num2')">2</div>
+        </div>
+        
+
+        <!-- Buttons for Operations -->
+        <div class="operations">
+            <button id="addButton" onclick="addValue()">Add</button>
+            <button id="subtractButton" onclick="subtractValue()">Subtract</button>
+            <button id="multiplyButton" onclick="multiplyValue()">Multiply</button>
+            <button id="divideButton" onclick="divideValue()">Divide</button>
+        </div>
+
+        <!-- Number Grid for Selecting Numbers -->
+        <div class="number-grid-container">
+            <div class="number-grid">
+                <!-- Buttons for Numbers 0-9 -->
+                <button onclick="selectNumber(0)">0</button>
+                <button onclick="selectNumber(1)">1</button>
+                <button onclick="selectNumber(2)">2</button>
+                <button onclick="selectNumber(3)">3</button>
+                <button onclick="selectNumber(4)">4</button>
+                <button onclick="selectNumber(5)">5</button>
+                <button onclick="selectNumber(6)">6</button>
+                <button onclick="selectNumber(7)">7</button>
+                <button onclick="selectNumber(8)">8</button>
+                <button onclick="selectNumber(9)">9</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

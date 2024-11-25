@@ -1,8 +1,227 @@
+/* General Body Styling */
 body {
-    background-color: rgb(32, 29, 29);
-    color: white;
-    font-size: 35px;
+    background: linear-gradient(to bottom, #000000, #002b36);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 20px solid transparent;
+    border-image: linear-gradient(green, blue) 1;
+    box-shadow: inset 0 0 10px 5px white;
+    font-family: Arial;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading Text Styling */
+.random-header {
     font-weight: bold;
-    font-style: italic;
-    text-shadow: 2px 2px 4px red;
+    font-size: 9vw;
+    color: #76c893;
+    text-shadow: 3px 3px 10px #32cd32;
+    margin: -20px;
+}
+
+/* Red Box for Sum */
+#sum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #ff6347, #b71c1c);
+    color: white; 
+    font-weight: bold;
+    font-size: 10vw;
+    border: 3px solid white; 
+    border-radius: 20px; 
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8); 
+    padding: 80px; 
+    margin: 20px auto 30px auto; 
+    width: 175px; 
+    height: 100px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+}
+
+/* Hover Effect */
+/* Hover Effect */
+#sum:hover {
+    box-shadow: 0 0 30px rgba(255, 99, 71, 1); 
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+    width: 140px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: solid 2px white;
+    border-radius: 10px;
+    margin: 0 auto; 
+    transition: all 0.3s;
+}
+
+/* Individual Button Colors */
+#addButton {
+    background: linear-gradient(to bottom, #5ca371, #3d874e);
+    color: black;
+    margin: 10px 10px 20px 10px; 
+}
+
+#subtractButton {
+    background: linear-gradient(to bottom, #5aa5a5, #468b8b);
+    color: black;
+    margin: 10px 10px 20px 10px; 
+
+}
+
+#multiplyButton {
+    background: linear-gradient(to bottom, #ffd700, #ffc107);
+    color: black;
+    margin: 10px 10px 20px 10px; 
+
+}
+
+#divideButton {
+    background: linear-gradient(to bottom, #9b59b6, #6a0dad);
+    color: black;
+    margin: 10px 10px 20px 10px; 
+
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Number Container Styling */
+.num-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px;
+}
+
+/* Styling for Number Display (NUM 1 and NUM 2) */
+.number-display {
+    width: 200px;
+    height: 130px;
+    font-size: 5rem;
+}
+
+.operation-display {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+}
+
+/* Hover Effects for All Boxes */
+.number-display:hover, #operation:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
+}
+
+/* Focus Effect */
+.number-display:focus, .operation-display:focus {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1); /* Yellow glow */
+    transform: scale(1.1); /* Slight zoom */
+    border-color: yellow;
+}
+
+/* Styling for Number and Operator Display Boxes */
+.number-display, .operation-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 5px 20px 0;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #ffffff; 
+    transition: all 0.3s ease-in-out; 
+    cursor: pointer; 
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 130px); /* 5 buttons per row */
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+    padding: 0px;
+}
+
+/* Styling for Num1 Box (Pink) */
+#num1-display {
+    background: linear-gradient(to bottom, #ff8ba7, #ff5e78); 
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 139, 167, 0.8); 
+    transition: all 0.3s ease;
+}
+
+/* Styling for Num2 Box (Orange) */
+#num2-display {
+    background: linear-gradient(to bottom, #ff8ba7, #ff5e78); 
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 139, 167, 0.8); 
+    transition: all 0.3s ease;
+}
+
+/* Styling for Operator Box (Brown) */
+#operation {
+    background: linear-gradient(to bottom, #ffad66, #ff7f50); 
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 173, 102, 0.8); 
+    transition: all 0.3s ease;
+}
+
+
+/* Styling for Number Buttons */
+.number-grid button {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 25%; 
+    background-color: #444; 
+    color: white; 
+    transition: all 0.3s ease;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Hover Effect: Brown Glow */
+.number-grid button:hover {
+    transform: scale(1.1); 
+    background-color: #8b4513; 
+    box-shadow: 0 0 15px 2px #8b4513; 
+    color: white; 
+}
+
+/* Selected (Focused) Button Effect */
+.number-grid button:focus {
+    background-color: #a0522d; /
+    box-shadow: 0 0 20px 4px #a0522d; 
+    color: white; 
+}
+
+/* Offset the second row */
+.number-grid button:nth-child(6),
+.number-grid button:nth-child(7),
+.number-grid button:nth-child(8),
+.number-grid button:nth-child(9),
+.number-grid button:nth-child(10) {
+    margin-left: 70px; 
 }
