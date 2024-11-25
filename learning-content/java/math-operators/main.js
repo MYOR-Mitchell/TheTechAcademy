@@ -95,6 +95,15 @@ function divideValue() {
     }
 }
 
+function resetFields() {
+    currentValue = 0;
+    num1 = 0;
+    num2 = 0;
+    operator = "";
+    updateDisplay(); // Update the UI to show reset state
+    resetActiveField(); // Remove any active highlights
+}
+
 // Resets all fields after 5 seconds
 function resetAfterCalculation() {
     setTimeout(() => {

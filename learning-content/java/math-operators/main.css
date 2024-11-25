@@ -35,7 +35,7 @@ body {
     color: white; 
     font-weight: bold;
     font-size: 10vw;
-    border: 3px solid white; 
+    border: 2px solid white; 
     border-radius: 20px; 
     box-shadow: 0 0 15px rgba(255, 99, 71, 0.8); 
     padding: 0px; 
@@ -44,12 +44,6 @@ body {
     height: 200px; 
     transition: all 0.3s ease; 
     box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
-}
-
-/* Hover Effect */
-#sum:hover {
-    box-shadow: 0 0 30px rgba(255, 99, 71, 1); 
-    transform: scale(1.05);
 }
 
 /* Button Styling */
@@ -72,12 +66,12 @@ button {
 }
 
 #subtractButton {
-    background: linear-gradient(to bottom, #5aa5a5, #468b8b);
+    background: linear-gradient(to bottom, #ff8ba7, #ff5e78);
     color: black;
 }
 
 #multiplyButton {
-    background: linear-gradient(to bottom, #ffd700, #ffc107);
+    background: linear-gradient(to bottom, #ffad66, #ff7f50);
     color: black;
 }
 
@@ -111,23 +105,18 @@ button:hover {
 }
 
 .operation-display {
-    width: 75px;
+    width: 65px;
     height:65px;
     font-size: 3rem;
 }
 
-/* Hover Effects for All Boxes */
-.number-display:hover, #operation:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
-}
-
-/* Focus Effect */
-.number-display:focus, .operation-display:focus {
-    box-shadow: 3 3 20px rgba(255, 255, 0, 1); /* Yellow glow */
-    transform: scale(1.1); /* Slight zoom */
-    border-color: yellow;
-}
+        /* Hover Effects for All Boxes */
+/*
+        .number-display:hover, #operation:hover, #sum:hover {
+            transform: scale(1.1); 
+            filter: brightness(1.2);
+        }
+*/
 
 /* Styling for Number and Operator Display Boxes */
 .number-display, .operation-display {
@@ -145,77 +134,72 @@ button:hover {
     cursor: pointer; 
 }
 
-.number-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 130px); /* 5 buttons per row */
-    justify-content: center;
-    position: relative;
-    margin: 10px 0 20px 0;
-    padding: 0px;
-}
-
 /* Styling for Num1 Box (Pink) */
 #num1-display {
-    background: linear-gradient(to bottom, #ff8ba7, #ff5e78); 
+    background: linear-gradient(to bottom, #004d66, #007399); 
     color: white;
     border: 2px solid white;
-    box-shadow: 0 0 10px rgba(255, 139, 167, 0.8); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); 
     transition: all 0.3s ease;
 }
 
 /* Styling for Num2 Box (Orange) */
 #num2-display {
-    background: linear-gradient(to bottom, #ff8ba7, #ff5e78); 
+    background: linear-gradient(to bottom, #004d66, #007399); 
     color: white;
     border: 2px solid white;
-    box-shadow: 0 0 10px rgba(255, 139, 167, 0.8); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); 
     transition: all 0.3s ease;
 }
 
-/* Styling for Operator Box (Brown) */
 #operation {
-    background: linear-gradient(to bottom, #ffad66, #ff7f50); 
+    background: #FBCB58;
     color: white;
     border: 2px solid white;
-    box-shadow: 0 0 10px rgba(255, 173, 102, 0.8); 
     transition: all 0.3s ease;
 }
 
 
 /* Styling for Number Buttons */
 .number-grid button {
-    width:75px;
-    height: 75px;
+    width:70px;
+    height: 70px;
     font-size: 22px;
     font-weight: bold;
     border: 2px solid white;
-    border-radius: 25%; 
-    background-color: #444; 
-    color: white; 
+    border-radius: 25%;
+    background: linear-gradient(to bottom, #555555, #3b3b3b); /* Vibrant dark gray gradient */
+    color: white;
     transition: all 0.3s ease;
-    margin: 10px 30px 10px 30px;
+    margin: 10px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover Effect: Brown Glow */
-.number-grid button:hover {
-    transform: scale(1.1); 
-    background-color: #8b4513; 
-    box-shadow: 0 0 15px 2px #8b4513; 
-    color: white; 
+.number-grid-top {
+    grid-template-columns: repeat(5, 130px); /* Allow up to 5 columns */
 }
 
-/* Selected (Focused) Button Effect */
+.number-grid-bottom {
+    grid-template-columns: repeat(6, 130px); /* Allow up to 6 columns */
+}
+
 .number-grid button:focus {
-    background-color: #a0522d; 
-    box-shadow: 0 0 20px 4px #a0522d; 
-    color: white; 
+    background: linear-gradient(to bottom, #444444, #222222); /* Darker gray gradient */
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.9); /* Enhanced shadow for focus */
+    color: #f0f0f0; /* Slightly lighter text */
 }
 
-    /* Offset the second row */
-.number-grid button:nth-child(6),
-.number-grid button:nth-child(7),
-.number-grid button:nth-child(8),
-.number-grid button:nth-child(9),
-.number-grid button:nth-child(10) {
-    margin-left: -30px; 
+#resetButton {
+    width: 75px;
+    height: 75px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white; /* White text for contrast */
+    background: linear-gradient(to bottom, #b36342, #8c472e); /* Warm vibrant brown gradient */
+    border: 2px solid white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+

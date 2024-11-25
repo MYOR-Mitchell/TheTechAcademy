@@ -27,7 +27,7 @@
             <div id="operation" class="operation-display" onclick="setActiveField('operation')">+</div>
             <div id="num2-display" class="number-display" onclick="setActiveField('num2')">2</div>
         </div>
-        
+
 
         <!-- Buttons for Operations -->
         <div class="operations">
@@ -38,19 +38,23 @@
         </div>
 
         <!-- Number Grid for Selecting Numbers -->
-        <div class="number-grid-container">
-            <div class="number-grid">
+        <div class="number-grid">
+            <div class="number-grid-top">
                 <!-- Buttons for Numbers 0-9 -->
                 <button onclick="selectNumber(5)">5</button>
                 <button onclick="selectNumber(6)">6</button>
                 <button onclick="selectNumber(7)">7</button>
                 <button onclick="selectNumber(8)">8</button>
                 <button onclick="selectNumber(9)">9</button>
+            </div>
+            <div class="number-grid-bottom">
                 <button onclick="selectNumber(0)">0</button>
                 <button onclick="selectNumber(1)">1</button>
                 <button onclick="selectNumber(2)">2</button>
                 <button onclick="selectNumber(3)">3</button>
                 <button onclick="selectNumber(4)">4</button>
+                <!-- Reset Button -->
+                <button id="resetButton" onclick="resetFields()">C</button>
             </div>
         </div>
     </div>
