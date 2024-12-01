@@ -4,60 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A brief description of your webpage for SEO purposes.">
-    <title>Learning</title>
+    <title>Calculator</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
     <!-- JavaScript -->
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
+
+    <!-- Header -->
+    <div class="main-header">Calculator</div>
+
+    <!-- Sum Display Section -->
+    <div class="sum">0</div>
+
+    <!-- Labels and Display for Num1, Operation, and Num2 -->
+    <div class="operation-container">
+        <input type="text" id="num1" class="values-display" maxlength="2" oninput="validateInput(this)" placeholder="0">
+        <div id="operator" class="operation-display">_</div>
+        <input type="text" id="num2" class="values-display" maxlength="2" oninput="validateInput(this)" placeholder="0">
+    </div>
+
+    <!-- Buttons for Operations -->
     <div>
-        <!-- Header -->
-        <div class="random-header">Calculator</div>
+        <button class="operation-button add-button" onclick="setOperator('+')">Add</button>
+        <button class="operation-button subtract-button" onclick="setOperator('-')">Subtract</button>
+        <button class="operation-button multiply-button" onclick="setOperator('*')">Multiply</button>
+        <button class="operation-button divide-button" onclick="setOperator('/')">Divide</button>
+    </div>
 
-        <!-- Display the Current Sum -->
-        <div id="sum">0</div>
-
-        <!-- Labels and Display for Num1 and Num2 -->
-        <div class="num-container">
-            <div id="num1-display" class="number-display" onclick="setActiveField('num1')">1</div>
-            <div id="operation" class="operation-display" onclick="setActiveField('operation')">+</div>
-            <div id="num2-display" class="number-display" onclick="setActiveField('num2')">2</div>
+    <!-- Number Grid for Selecting Numbers -->
+    <div>
+        <div class="number-keyboard-top">
+            <!-- Top row of buttons -->
+            <button class="number-keyboard" onclick="selectNumber(1)">1</button>
+            <button class="number-keyboard" onclick="selectNumber(3)">3</button>
+            <button class="number-keyboard" onclick="selectNumber(5)">5</button>
+            <button class="number-keyboard" onclick="selectNumber(7)">7</button>
+            <button class="number-keyboard" onclick="selectNumber(9)">9</button>
         </div>
-
-
-        <!-- Buttons for Operations -->
-        <div class="operations">
-            <button id="addButton" onclick="addValue()">Add</button>
-            <button id="subtractButton" onclick="subtractValue()">Subtract</button>
-            <button id="multiplyButton" onclick="multiplyValue()">Multiply</button>
-            <button id="divideButton" onclick="divideValue()">Divide</button>
-        </div>
-
-        <!-- Number Grid for Selecting Numbers -->
-        <div class="number-grid">
-            <div class="number-grid-top">
-                <!-- Buttons for Numbers 0-9 -->
-                <button onclick="selectNumber(5)">5</button>
-                <button onclick="selectNumber(6)">6</button>
-                <button onclick="selectNumber(7)">7</button>
-                <button onclick="selectNumber(8)">8</button>
-                <button onclick="selectNumber(9)">9</button>
-            </div>
-            <div class="number-grid-bottom">
-                <button onclick="selectNumber(0)">0</button>
-                <button onclick="selectNumber(1)">1</button>
-                <button onclick="selectNumber(2)">2</button>
-                <button onclick="selectNumber(3)">3</button>
-                <button onclick="selectNumber(4)">4</button>
-                <!-- Reset Button -->
-                <button id="resetButton" onclick="resetFields()">C</button>
-            </div>
+        <div class="number-keyboard-bottom">
+            <!-- Bottom row of buttons -->
+            <button class="number-keyboard" onclick="selectNumber(0)">0</button>
+            <button class="number-keyboard" onclick="selectNumber(2)">2</button>
+            <button class="number-keyboard" onclick="selectNumber(4)">4</button>
+            <button class="number-keyboard" onclick="selectNumber(6)">6</button>
+            <button class="number-keyboard" onclick="selectNumber(8)">8</button>
+            <button class="clear-entry-button" onclick="resetFields()">C</button>
         </div>
     </div>
+
 </body>
 
 </html>
