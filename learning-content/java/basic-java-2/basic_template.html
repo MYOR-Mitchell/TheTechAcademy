@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="more description">
-
-    <!-- Page Title -->
     <title>My Website</title>
 
     <!-- External CSS -->
@@ -19,32 +16,47 @@
 
 <body>
 
+    <!-- Header -->
     <header>
         <!-- Navigation Bar -->
         <nav class="navbar">
             <ul class="nav-list">
                 <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link">Quiz</a></li>
+                <li><a href="#" class="nav-link">Leaderboard</a></li>
             </ul>
         </nav>
 
-        <!-- Header Section -->
-        <section class="header-section">
-            <h1 class="header-title">Join the Crew!</h1>
-            <div class="header-image-container">
-                <img src="images/header-img.jpg" alt="One Piece Crew" class="header-image">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">The Grand Line Adventure Quiz!</h1>
+            <div class="hero-image-container">
+                <img src="images/header-img.jpg" alt="One Piece Crew" class="hero-image">
             </div>
-            <p class="header-description">
-                Explore the world of *One Piece* and take on the challenge of knowing your favorite pirate crews. Test
-                your knowledge with our fun quizzes and discover how much of a true pirate you really are!
+            <p class="hero-description">
+                Step into the world of <em>One Piece</em> and test your knowledge! <br>
+                How far can you make it? To the end!?<br>
+                Let's find out, but miss three questions and you're out!
             </p>
+            <button class="start-quiz-btn" onclick="startQuiz()">Start Quiz</button>
         </section>
     </header>
 
-    <footer>
-        
-    </footer>
+    <main>
+        <section class="quiz-section" id="quiz-section" style="display: none;">
+            <button class="close-quiz-btn" onclick="closeQuiz()">X</button>
+            <h2>One Piece Quiz</h2>
+            <div id="quiz-questions"></div>
+            <div id="question-indicator"></div>
+            <div id="wrong-indicator"></div>
+            <button id="submit-quiz" onclick="submitQuiz()">Submit Answer</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+     <footer class="footer-section">
+     </footer>
+
 </body>
 
 </html>
