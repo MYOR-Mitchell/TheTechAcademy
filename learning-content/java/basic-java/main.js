@@ -47,3 +47,21 @@ const crew = {
     musician: "Brook",
     helmsman: "Jinbe"   /* document.write(Crew.Helmsman); // Outputs: Jeremiah */
 };
+
+
+// Create a JavaScript object (dictionary) containing Devil Fruits from One Piece.
+const devilFruits = {
+    "GomuGomuNoMi": "The Gomu Gomu no Mi is a Paramecia-type Devil Fruit that grants its user the properties of rubber, making the user a Rubber Human.",
+    "MeraMeraNoMi": "The Mera Mera no Mi is a Logia-type Devil Fruit that allows its user to create, control, and transform into fire at will.",
+    "HitoHitoNoMi": "The Hito Hito no Mi is a Zoan-type Devil Fruit that allows its user to transform into a human and gain human intelligence.",
+    "YamiYamiNoMi": "The Yami Yami no Mi is a Logia-type Devil Fruit that allows its user to create, control, and transform into darkness."
+};
+
+// Function that displays Devil Fruit information when called.
+function displayDevilFruitInfo() {
+    // Choose a Devil Fruit to display. In this case, we're displaying Gomu Gomu no Mi.
+    const fruitInfo = devilFruits["GomuGomuNoMi"];
+
+    // Output the information using the innerHTML method.
+    document.getElementById("Dictionary").innerHTML = fruitInfo;
+}
