@@ -16,47 +16,61 @@
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">Quiz</a></li>
-                <li><a href="#" class="nav-link">Leaderboard</a></li>
-            </ul>
-        </nav>
+    <section>
+        <p>How many seconds would you like to set your alarm for?</p>
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Start</button>
+        <button onclick="resetCountdown()">Reset</button>
+        <p id="timer"></p>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1 class="hero-title">The Grand Line Adventure Quiz!</h1>
-            <div class="hero-image-container">
-                <img src="images/header-img.jpg" alt="One Piece Crew" class="hero-image">
-            </div>
-            <p class="hero-description">
-                Step into the world of <em>One Piece</em> and test your knowledge! <br>
-                How far can you make it? To the end!?<br>
-                Let's find out, but miss three questions and you're out!
-            </p>
-            <button class="start-quiz-btn" onclick="startQuiz()">Start Quiz</button>
-        </section>
-    </header>
+    <section>
+        <p>Heads or tails?</p>
+        <select id="coin">
+            <option value="Heads">Heads</option>
+            <option value="Tails">Tails</option>
+        </select>
+        <button onclick="flipCoin()">Flip</button>
+        <button onclick="resetCoinFlip()">Reset</button>
+        <p id="result"></p> <!-- New paragraph for displaying the result -->
+    </section>
 
     <main>
-        <section class="quiz-section" id="quiz-section" style="display: none;">
-            <button class="close-quiz-btn" onclick="closeQuiz()">X</button>
-            <h2>One Piece Quiz</h2>
-            <div id="quiz-questions"></div>
-            <div id="question-indicator"></div>
-            <div id="wrong-indicator"></div>
-            <button id="submit-quiz" onclick="submitQuiz()">Submit Answer</button>
-        </section>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/dark-mode-theme.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/dark-water-theme.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/water-mode-theme.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </main>
-
-    <!-- Footer -->
-     <footer class="footer-section">
-     </footer>
-
 </body>
 
 </html>
