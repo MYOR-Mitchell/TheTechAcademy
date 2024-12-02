@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Academy Cinemas</title>
+  <!--BOOTSTRAP CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--CUSTOM CSS / Had to be listed after bootstrap to override Bootstrap CSS based on levels of specificity-->
+  <link href="css/custom.css" rel="stylesheet">
+  <!--Custom css for for multiple screen sizes!-->
+  <link href="css/custom_css_media.css" rel="stylesheet">
+</head>
+
+<body>
+  <!--BOOTSTRAP JAVASCRIPT-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Academy Cinemas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Now Playing</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#dredd">Dredd</a></li>
+              <li><a class="dropdown-item" href="#tron">Tron</a></li>
+              <li><a class="dropdown-item" href="#the-internship">The Internship</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tickets">Tickets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Header-->
+  <!--LOGO-->
+  <header class="row justify-content-center">
+    <img src="images/second-logo.webp" class="img-fluid col-lg-6" id="header-image" alt="Academy Cinemas Logo">
+  </header>
+  <!--Now playing-->
+  <section>
+    <div class="container" id="now-playing">
+      <h1>Now Playing</h1>
+      <!--Dredd-->
+      <div class="d-flex flex-row flex-wrap spacer" id="dredd">
+        <div class="col-lg-5 mx-auto">
+          <img src="images/dredd.jpg" class="img-fluid" alt="Dredd movie poster">
+        </div>
+        <div class="card col-lg-5 mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Dredd</h3>
+            <!--Dredd movie Description-->
+            <p class="lead">
+              In a dystopian future, the sprawling, crime-ridden Mega-City One is policed by the Judges, who act as
+              judge, jury,
+              and executioner. Judge Dredd, a legendary and uncompromising enforcer, teams up with rookie Judge
+              Cassandra Anderson
+              on a mission to take down Ma-Ma, a ruthless drug lord controlling a 200-story tower block. As the Judges
+              ascend
+              the tower, they face relentless, brutal opposition in a battle for survival. Filled with intense action,
+              gritty visuals, and a dark sense of justice, Dredd delivers a thrilling, no-holds-barred experience.
+              <br>
+              <br>
+              <b>Director:</b> Pete Travis
+              <br>
+              <b>Starring:</b> Karl Urban, Olivia Thirlby, Lena Headey
+            </p>
+            <br>
+            <br>
+            <!--Dredd Show Times-->
+            <h4 class="card-title">Show Times</h4>
+            <div class="row">
+              <div class="col">
+                <a class="btn" href="#tickets" role="button">10:00 AM</a>
+                <a class="btn" href="#tickets" role="button">10:30 AM</a>
+                <a class="btn" href="#tickets" role="button">1:10 PM</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn" href="#tickets" role="button">2:30 PM</a>
+                <a class="btn" href="#tickets" role="button">4:50 PM</a>
+                <a class="btn" href="#tickets" role="button">8:00 PM</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Tron-->
+      <div class="d-flex flex-row flex-wrap reverse spacer" id="tron">
+        <div class="col-lg-5 mx-auto">
+          <img src="images/tron.jpg" class="img-fluid" alt="Tron movie poster">
+        </div>
+        <div class="card col-lg-5 mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Tron</h3>
+            <!--Tron movie Description-->
+            <p class="lead">
+              Sam Flynn, the tech-savvy son of Kevin Flynn, is drawn into the digital world of the Grid while
+              investigating his father's mysterious disappearance. Inside the high-tech, neon-lit realm, Sam
+              reunites with his father and teams up with Quorra, a skilled warrior, to confront the ruthless
+              program CLU. With breathtaking visuals, an iconic Daft Punk soundtrack, and a thrilling blend
+              of action and innovation, Tron: Legacy explores themes of technology, legacy, and family.
+              <br>
+              <br>
+              <b>Director:</b> Joseph Kosinski
+              <br>
+              <b>Starring:</b> Garrett Hedlund, Jeff Bridges, Olivia Wilde
+            </p>
+            <br>
+            <br>
+            <!--Tron Show Times-->
+            <h4 class="card-title">Show Times</h4>
+            <div class="row">
+              <div class="col">
+                <a class="btn" href="#tickets" role="button">10:00 AM</a>
+                <a class="btn" href="#tickets" role="button">10:30 AM</a>
+                <a class="btn" href="#tickets" role="button">1:10 PM</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn" href="#tickets" role="button">2:30 PM</a>
+                <a class="btn" href="#tickets" role="button">4:50 PM</a>
+                <a class="btn" href="#tickets" role="button">8:00 PM</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--The Internship-->
+      <div class="d-flex flex-row flex-wrap spacer" id="the-internship">
+        <div class="col-lg-5 mx-auto">
+          <img src="images/the-internship.jpg" class="img-fluid" alt="The Internship movie poster">
+        </div>
+        <div class="card col-lg-5 mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">The Internship</h3>
+            <!--The Internship movie Description-->
+            <p class="lead">
+              Two middle-aged salesmen, Billy and Nick, find themselves out of jobs in a digital world that
+              has left them behind. In a last-ditch effort to reinvent themselves, they land internships at Google,
+              competing against tech-savvy millennials in a cutthroat environment. Full of laughs, heart, and
+              relatable challenges, The Internship is a comedy about second chances, adaptability, and the power of
+              teamwork.
+              <br>
+              <br>
+              <b>Director:</b> Shawn Levy
+              <br>
+              <b>Starring:</b> Vince Vaughn, Owen Wilson, Rose Byrne, Max Minghella
+            </p>
+            <br>
+            <br>
+            <!--The Intership Show Times-->
+            <h4 class="card-title">Show Times</h4>
+            <div class="row">
+              <div class="col">
+                <a class="btn" href="#tickets" role="button">10:00 AM</a>
+                <a class="btn" href="#tickets" role="button">10:30 AM</a>
+                <a class="btn" href="#tickets" role="button">1:10 PM</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn" href="#tickets" role="button">2:30 PM</a>
+                <a class="btn" href="#tickets" role="button">4:50 PM</a>
+                <a class="btn" href="#tickets" role="button">8:00 PM</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Tickets-->
+  <section>
+    <div class="container spacer" id="tickets">
+      <h1>Tickets</h1>
+      <div class="d-flex flex-row flex-wrap">
+        <!--Movie selection-->
+        <div class="col">
+          <div class="card text-center">
+            <h5 class="card-title">Please select a movie</h5>
+            <div class="card-body">
+              <select class="form-select" aria-label="Movie title selection">
+                <option selected>Select movie</option>
+                <option value="1">Dredd</option>
+                <option value="2">Tron</option>
+                <option value="3">The Internship</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--Time selection-->
+        <div class="col">
+          <div class="card text-center">
+            <h5 class="card-title">Please select a show time</h5>
+            <div class="card-body">
+              <select class="form-select" aria-label="Show time selection">
+                <option selected>Select time</option>
+                <option value="1">10:00 AM</option>
+                <option value="2">11:30 AM</option>
+                <option value="3">1:10 PM</option>
+                <option value="4">2:30 PM</option>
+                <option value="5">4:50 PM</option>
+                <option value="6">8:00 PM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--Number of tickets-->
+        <div class="col">
+          <div class="card text-center">
+            <h5 class="card-title">Please select number of tickets</h5>
+            <div class="card-body">
+              <input type="number" id="quantity" value="1" step="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--But tickets button-->
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Contact form-->
+  <section>
+    <div class="container" id="contact">
+      <h1>Contact Us!</h1>
+      <div class="row gy-4">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last Name">
+        </div>
+        <div>
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div>
+          <textarea class="form-control" rows="3" placeholder="Type Message Here..."></textarea>
+          <button type="submit" class="btn yellow-btn" id="contact-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <section>
+    <div class="container-fluid">
+      <footer class="d-flex flex-wrap justify-content-center align-items-center py-3">
+        <p class="col-md-4 mb-0 footer-text">&copy; MYOR-Academy Cinemas</p>
+
+        <img src="images/this_guy.jpg" class="col-md-4 footer-img" alt="Academy Cinemas logo">
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#now-playing" class="nav-link px-2 footer-text">Now Playing</a></li>
+          <li class="nav-item"><a href="#tickets" class="nav-link px-2 footer-text">Tickets</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link px-2 footer-text">Contact</a></li>
+        </ul>
+      </footer>
+    </div>
+  </section>
+</body>
+
+</html>
