@@ -95,3 +95,13 @@ function Color_Function() {
     }
     document.getElementById("Output").innerHTML = Color_Output;
 }
+
+//for data- attributes
+function showInfo(element) {
+    // Get the values of the custom data attributes
+    const character = element.getAttribute("data-character");
+    const crew = element.getAttribute("data-crew");
+  
+    // Display them
+    alert(`${character} is part of the ${crew}.`);
+  }
