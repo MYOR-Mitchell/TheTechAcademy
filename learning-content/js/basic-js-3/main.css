@@ -42,3 +42,14 @@ input::placeholder {
     flex-direction: row;
     align-items: center;
 }
+
+.ulsize {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 15px;
+}

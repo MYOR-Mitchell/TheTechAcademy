@@ -2,11 +2,9 @@
 <html>
 
 <head>
-
     <link rel="stylesheet" href="main.css">
-
-    <script src="async.js" defer></script>
-
+    <script src="main.js" defer></script>
+    <script src="new.js" defer></script>
 </head>
 
 <body>
@@ -48,17 +46,33 @@
     <p id="Output"></p>
 
     <!-- <canvas id="ID_Name" width="500" height="250"></canvas> NO BORDER-->
+    <canvas id="ID_Name" width="350" height="100" style="border:5px double yellow;"></canvas>
 
-    <canvas id="ID_Name" width="500" height="250" style="border:5px double yellow;"></canvas>
-
-    <ul>
-        <li data-character="Monkey D. Luffy" data-crew="Straw Hat Pirates" onclick="showInfo(this)">
-            Luffy
-        </li>
-        <li data-character="Roronoa Zoro" data-crew="Straw Hat Pirates" onclick="showInfo(this)">
-            Zoro
-        </li>
+    <ul class="ulsize">
+        <li data-character="Monkey D. Luffy" data-crew="Straw Hat Pirates" onclick="showInfo(this)">Luffy</li>
+        <li data-character="Roronoa Zoro" data-crew="Straw Hat Pirates" onclick="showInfo(this)">Zoro</li>
     </ul>
+
+    <div>
+        <h1>Favorite Truck Brands</h1>
+        <p>Click the button to display your favorite truck brands:</p>
+    </div>
+
+    <section class="container">
+        <button onclick="displayTruck()">Show Truck Brands</button>
+        <div id="displayTruck">Trucks</div>
+    </section>
+
+    <div id="test"></div>
+    <script>
+        document.getElementById("test").innerHTML = "Hello JavaScript!";
+    </script>
+
+    <section class="container">
+        <button onclick="myAge()">Age > 28?</button>
+        <div id="displayAge"></div>
+    </section>
+
 </body>
 
 </html>

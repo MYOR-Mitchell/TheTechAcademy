@@ -1,25 +1,19 @@
-
-
-//Displays 1 - 10
+// Displays 1 - 10
 function count_To_Ten() {
     var Digit = "";
     var X = 1;
     while (X < 11) {
-        if (X == 10)
-        {
+        if (X == 10) {
             Digit += X + ".";
-            X++;
-        }
-        else
-        {
+        } else {
             Digit += X + ", ";
-            X++;
         }
+        X++;
     }
     document.getElementById("Counting_to_Ten").innerHTML = Digit;
 }
 
-//Each click is adds 1 to the count
+// Each click adds 1 to the count
 var Clicked = 0;
 
 function count_per_click() {
@@ -27,51 +21,48 @@ function count_per_click() {
     document.getElementById("Count_up").innerHTML = Clicked;
 }
 
-
-//for loop of some sort for class
+// For loop of some sort for class
 var people = ["John", "Paul", "George", "Ringo", "Pete", "Stuart", "Brian"];
 
 function for_loop() {
     people.sort();
-
     var output = "";
-    for(var i = 0; i < people.length; i++)
-    {
+    for (var i = 0; i < people.length; i++) {
         output += (i + 1) + ".) " + people[i] + "&emsp;";
     }
     document.getElementById("people").innerHTML = output;
 }
 
-//random input to grab someone
+// Random input to grab someone
 function specific_person() {
     var index = document.getElementById("person_number").value;
     document.getElementById("person").innerHTML = people[index - 1];
 }
 
-//return a string
+// Return a string
 function myFunction(name) {
-  return "Hello " + name;
+    return "Hello " + name;
 }
 document.getElementById("demo").innerHTML = myFunction("John");
 
-//Create object
-let car = { 
+// Create object
+let car = {
     make: "Dodge ",
-    model: "Viper ", 
-    year: "2021", 
-    color: "red", 
-    description: function() { 
-        return "The car is a" + this.year + this.color + this.make + this.model; 
-        } 
-    }; 
+    model: "Viper ",
+    year: "2021",
+    color: "red",
+    description: function () {
+        return "The car is a " + this.year + " " + this.color + " " + this.make + this.model;
+    }
+};
 document.getElementById("Car_Object").innerHTML = car.description(); //<p id="Car_Object"></p>
 
-//switch statement
+// Switch statement
 function Color_Function() {
     var Color_Output;
     var Colors = document.getElementById("Color_Input").value;
     var Color_String = " is a great color!";
-    switch(Colors) {
+    switch (Colors) {
         case "Red":
             Color_Output = "Red" + Color_String;
             break;
@@ -96,12 +87,26 @@ function Color_Function() {
     document.getElementById("Output").innerHTML = Color_Output;
 }
 
-//for data- attributes
+// For data- attributes
 function showInfo(element) {
     // Get the values of the custom data attributes
     const character = element.getAttribute("data-character");
     const crew = element.getAttribute("data-crew");
-  
+
     // Display them
     alert(`${character} is part of the ${crew}.`);
-  }
+}
+
+// Traditional function to generate a message about truck brands
+function truck(val) {
+    return "These are my favorite truck brands: " + val;
+}
+
+// Function to handle the button click and display the result
+function displayTruck() {
+    // Call the traditional function with truck brands
+    const truckBrands = truck("Ford, Ram, and Chevrolet");
+
+    // Update the HTML content of the 'displayTruck' div
+    document.getElementById('displayTruck').innerHTML = truckBrands;
+}
