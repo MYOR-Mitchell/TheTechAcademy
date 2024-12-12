@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <script src="async.js" defer></script> 
-        <p id="p1">Hello World<br>Hello World</p>
 
+<head>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="async.js" defer></script>
+
+</head>
+
+<body>
+
+    <section class="container">
         <button onclick="count_To_Ten()">Count to 10</button>
         <div id="Counting_to_Ten"></div>
-        
-    </body>
+    </section>
+
+    <section class="container">
+        <button onclick="count_per_click()">Count++</button>
+        <div id="Count_up"></div>
+    </section>
+
+    <section class="container">
+        <button onclick="for_loop()">For Loop</button>
+        <div id="people"></div>
+    </section>
+
+    <section class="container">
+        <button onclick="specific_person()">Specific</button>
+        <input type="text" id="person_number" placeholder="0">
+        <div id="person"></div>
+    </section>
+
+    <h1>What is your favorite color?</h1>
+<h3>Pick your favorite color from this list:</h3>
+<ul>
+    <li>Red</li>
+    <li>Yellow</li>
+    <li>Green</li>
+    <li>Blue</li>
+    <li>Pink</li>
+    <li>Purple</li>
+</ul>
+<h3>Enter your choice below:</h3>
+<button onclick="Color_Function()">Submit Color</button>
+<input id="Color_Input" type="text">
+<p id="Output"></p>
+
+<!-- <canvas id="ID_Name" width="500" height="250"></canvas> NO BORDER--> 
+
+<canvas id="ID_Name" width="500" height="250" style="border:5px solid black;"></canvas>
+</body>
+
 </html>
