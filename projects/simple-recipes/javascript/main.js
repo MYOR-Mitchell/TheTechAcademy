@@ -14,6 +14,11 @@ for (var i = 0; i < btns.length; i++) {
     btns[i].onclick = function (event) {
         modal = document.querySelector(event.target.getAttribute("href"));
         modal.style.display = "block";
+
+        // Automatically close the modal after 10 seconds
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 10000); // 10000 milliseconds = 10 seconds
     }
 }
 
@@ -80,3 +85,6 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             console.log(JSON.stringify(formData));
     }
 );
+
+//Modal closes after 10 seconds of being opened.
+
