@@ -106,9 +106,10 @@ td p{
 /*BODY*/
 
 .container{
-    display: inline-block;
+    display: inline-block; /*This will display the container as an inline block element, which will allow the container to
+    sit side by side with other elements on the screen*/
     background-size: 100%;
-    padding-top: 60px;
+    padding-top: 60px; 
     padding-left: 30px;
 }
 
@@ -158,7 +159,7 @@ p{
 /*Positions elements to sit side by side on the screen*/
 .column{
     float: left;
-    width: 48%;
+    width: 48%; /*Each column will take up 48% of the screen*/
     padding: 10px;
 }
 
@@ -421,4 +422,76 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background-color: rgb(247, 177, 188);
+}
+
+/*RECIPE MODAL*/
+
+.recipe-modal{
+    display: none; /*Hides the modal from the user*/
+    position: fixed; /*The modal will stay in the same position on the screen even when the user scrolls*/
+    top: 0; /*Positions the modal at the top of the screen*/
+    left: 0; /*Positions the modal at the left of the screen*/
+    background-color: rgba(255, 255, 255, 0.5); /*Creates a transparent background that covers the whole screen*/
+    width: 100%; /*The modal will take up the full width of the screen*/
+    height: 100%; /*The modal will take up the full height of the screen*/
+}
+
+.recipe-content{
+    position: relative; /*The modal content will be positioned relative to the modal container*/
+    background-color: rgb(255, 255, 255);
+    top: 15vh; /*Positions the modal content 15% from the top of the screen*/
+    left: 27vw; /*Positions the modal content 27% from the left of the screen*/
+    width: 45vw; /*The width of the modal content will be 45% of the screen*/
+    height: 70%; /*The height of the modal content will be 70% of the screen*/
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /*The padding and border will be included in the width and height of the modal*/
+}
+
+.close-btn{
+    color: rgb(1, 128, 106);
+    font-size: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+}
+
+.modal-header{
+    padding-top: 20px;
+}
+
+.modal-body{
+    padding: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.rp-column-1{
+    width: 33%;
+}
+
+.rp-column-2{
+    width: 67%;
+}
+
+.recipe-list{
+    margin-left: -30px; 
+    font-family: 'Josefin Slab', serif; 
+    font-size: 18px;
+    display: block; /*This will override the flex value property in the ul type 
+    selector and list each item one after the other*/
+    border: none; /*Overrides the border property and value in the ul type selector*/
+    background-color: transparent; /*Overrides the background color in the ul  type selector*/
+    line-height: 1.5; /*Sets the space between lines of text to 1.5 times the size of the font*/
+    text-align: center;
+}
+
+.recipe-directions{
+    padding: 0px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
 }
