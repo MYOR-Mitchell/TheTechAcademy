@@ -1,0 +1,19 @@
+1.) Downloaded XAMPP which is a platform that that includes Apache as its core web server, alongside other components like MySQL database, PHP interpreter, and Perl.
+
+
+
+2.) Quick exposure to AJAX: Asynchronous JavaScript and XML (AJAX)
+	-Create button to return html with "thank you" message when click.
+
+
+
+3.) Used Apache ensure code worked as intended.
+	
+
+Self reminder:
+
+How can I test that everything worked?
+-Type in the following URL at your favorite web browser:
+	http://localhost/
+	or
+	http://127.0.0.1/
