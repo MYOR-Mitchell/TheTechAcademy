@@ -300,3 +300,9 @@ footer{
     height: 130px;
     border-radius: 50px;
 }
+
+/*POPOVERS*/
+
+.star-rating{
+    width: 80%;
+}
