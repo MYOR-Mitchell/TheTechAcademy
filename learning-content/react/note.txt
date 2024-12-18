@@ -1,0 +1,37 @@
+REACT_1 NOTE: This is all JavaScript! And remember, that’s what React is. We are calling built in React methods and functions.
+
+
+Some of the code above is React-specific, including:
+
+
+React.createClass – creates component classes
+
+ReactDOM.render() – used to render a React Component or Components
+
+React.createFactory – a function that generates a factory (object that can create other objects)
+
+There is also some vanilla JavaScript code we used within this, including:
+
+
+? – a conditional operator that checks for whether or not a condition is true, the : following it is shorthand for “else”
+
+% – finds the remainder
+
+setInterval() – a method that evaluates an expression at specified intervals (milliseconds)
+
+Using the above React code, we created a timer that counts upward.
+
+
+-----------
+
+
+REACT_2 NOTE:
+
+
+A constructor creates an object within a class
+
+“Props” is short for properties
+
+“Super” calls a constructor
+
+“setstate” schedules a UI update
