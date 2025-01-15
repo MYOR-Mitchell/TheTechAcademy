@@ -7,40 +7,36 @@ namespace Daily_Report_Assignment.UI
     public class UserInterface
     {
         private readonly IParser _parser;
-        private readonly IResult _result;
         private readonly StudentDailyReportFactory _factory;
 
-        public UserInterface(IParser parser, IResult result, StudentDailyReportFactory factory)
+        public UserInterface(IParser parser, StudentDailyReportFactory factory)
         {
             _parser = parser;
-            _result = result;
             _factory = factory;
         }
 
         public void CollectAndDisplayStudentData()
         {
-            var studentName = GetValidatedInput("What is your name?: ");
+            string studentName = GetValidatedInput("What is your name?: ");
 
-            var currentCourse = GetValidatedInput("What course are you on?: ");
+            string currentCourse = GetValidatedInput("What course are you on?: ");
 
             Console.Write("What page number?: ");
-            var currentPage = _parser.ParseInt(Console.ReadLine());
+            int currentPage = _parser.ParseInt(Console.ReadLine());
 
             Console.Write("Do you need help (yes/no)?: ");
-            var needsHelp = _parser.ParseBool(Console.ReadLine());
+            bool needsHelp = _parser.ParseBool(Console.ReadLine());
 
-            var positiveExperiences = GetValidatedInput("Were there any positive experiences you’d like to share? Please give specifics.: ");
+            string positiveExperiences = GetValidatedInput("Were there any positive experiences you’d like to share? Please give specifics.: ");
 
-            var otherFeedback = GetValidatedInput("Is there any other feedback you’d like to provide? Please be specific.: ");
+            string otherFeedback = GetValidatedInput("Is there any other feedback you’d like to provide? Please be specific.: ");
 
             Console.Write("How many hours did you study?: ");
-            var hoursStudied = _parser.ParseDouble(Console.ReadLine());
-
-            var report = _factory.Create(studentName, currentCourse, currentPage, needsHelp, positiveExperiences, otherFeedback, hoursStudied);
+            double hoursStudied = _parser.ParseDouble(Console.ReadLine());
 
             Console.Clear();
 
-            _result.DisplayReport(report);
+            GetResult(studentName, currentCourse, currentPage, needsHelp, positiveExperiences,otherFeedback,hoursStudied).DisplayReport();
         }
 
         private string GetValidatedInput(string prompt)
@@ -54,6 +50,20 @@ namespace Daily_Report_Assignment.UI
             } while (string.IsNullOrWhiteSpace(input));
 
             return input;
+        }
+         
+        public IResult GetResult(
+            string studentName, 
+            string currentCourse, 
+            int currentPage,
+            bool needsHelp,
+            string positiveExperiences,
+            string otherFeedback, 
+            double hoursStudied)
+        {
+            StudentDailyReport report = _factory.Create(studentName, currentCourse, currentPage, needsHelp, positiveExperiences, otherFeedback, hoursStudied);
+
+            return report;
         }
     }
 }

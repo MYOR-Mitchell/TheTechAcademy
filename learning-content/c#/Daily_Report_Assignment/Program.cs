@@ -21,7 +21,6 @@ namespace Daily_Report_Assignment
             var services = new ServiceCollection();
 
             services.AddSingleton<IParser, Parser>();
-            services.AddSingleton<IResult, Result>();
             services.AddSingleton<StudentDailyReportFactory>();
             services.AddSingleton<UserInterface>();
 
